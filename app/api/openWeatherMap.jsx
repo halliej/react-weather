@@ -14,8 +14,8 @@ module.exports = {
             } else {
                 return res.data.main.temp;
             }
-        }, function (res) {
-            throw new Error(`Error accessing the openWeatherMap service: ${res}`);
+        }, function (err) {
+            throw new Error('Unable to fetch weather for that location!');
         });
     }
 };
